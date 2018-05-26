@@ -3,15 +3,14 @@ phases:
   install:
     commands:
       - echo Entered the install phase...
-      - apt-get update -y
-      - pip install --upgrade mkdocs awscli pymdown-extensions
+      - pip install --upgrade mkdocs mkdocs-material awscli pymdown-extensions
       - mkdocs --version
   build:
     commands:
       - echo Entered the build phase...
       - echo Build started on `date`
       - mkdocs build
-      - aws s3 sync site/ s3://$BUCKET --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
+      - aws s3 sync site/ s3://$BUCKET_NAME --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
   post_build:
     commands:
       - echo Entered the post_build phase...
