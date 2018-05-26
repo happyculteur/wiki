@@ -1,0 +1,38 @@
+site_name: Happyculteur Wiki
+site_description: Wiki for the Happyculteur web based free and open source application
+site_author: Alexandre Kervadec
+site_url: https://wiki.app.happyculteur.co
+
+repo_name: happyculteur/wiki
+repo_url: https://github.com/happyculteur/wiki
+
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This wiki is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'yellow'
+    accent: 'yellow'
+  logo:
+    icon: nature_people
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

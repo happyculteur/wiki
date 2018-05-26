@@ -1,0 +1,20 @@
+version: 0.1
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+      - apt-get update -y
+      - pip install --upgrade mkdocs awscli pymdown-extensions
+      - mkdocs --version
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - mkdocs build
+      - aws s3 sync site/ s3://$BUCKET --delete --cache-control max-age=$CACHE_CONTROL_MAX_AGE
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - echo Build completed on `date`
+      - 'curl -X POST -d "{\"text\": \"Environment deployment succeded\", \"attachments\": [{\"color\": \"#00CC00\",\"title\": \"Deployment informations\", \"text\": \"Repository: https://github.com/$USER/$REPO\nBranch: $BRANCH \nBucket: $BUCKET_NAME\"}]}" https://hooks.slack.com/services/$SLACK_HOOK'
+
