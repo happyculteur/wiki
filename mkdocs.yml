@@ -6,7 +6,7 @@ site_url: https://wiki.app.happyculteur.co
 repo_name: happyculteur/wiki
 repo_url: https://github.com/happyculteur/wiki
 
-copyright: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />This wiki is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+copyright: <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 
 theme:
   name: 'material'
@@ -15,6 +15,8 @@ theme:
     accent: 'yellow'
   logo:
     icon: nature_people
+  feature:
+    tabs: true
 
 markdown_extensions:
   - toc:
@@ -36,3 +38,10 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+pages:
+  - Home: index.md
+  - Roadmap:
+    - Setting-up: roadmap/setting-up.md
+    - Register form: roadmap/register_form.md
+    - MVP: roadmap/mvp.md
