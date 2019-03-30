@@ -14,9 +14,9 @@ theme:
     primary: 'yellow'
     accent: 'yellow'
   logo:
-    icon: nature_people
+    icon: home
   feature:
-    tabs: true
+    tabs: false
 
 markdown_extensions:
   - toc:
@@ -45,3 +45,17 @@ pages:
     - Setting-up: roadmap/setting-up.md
     - Register form: roadmap/register_form.md
     - MVP: roadmap/mvp.md
+  - Architecture:
+    - General architecture: architecture/general/general.md
+    - Frontend:
+      - Data structure:
+        - Structures: architecture/frontend/data_structure.md
+        - Beekeeper: architecture/frontend/data_structure_beekeeper.md
+        - Individual: architecture/frontend/data_structure_individual.md
+        - Space: architecture/frontend/data_structure_space.md
+    - Backend:
+      - Data structure:
+        - Structures: architecture/backend/data_structure.md
+        - Beekeeper: architecture/backend/data_structure_beekeeper.md
+        - Individual: architecture/backend/data_structure_individual.md
+        - Space: architecture/backend/data_structure_space.md
